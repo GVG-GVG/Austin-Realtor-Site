@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://gvg-gvg.github.io/Austin-Realtor-Site/sitemap.xml
+Sitemap: https://agochs.github.io/Austin-Realtor-Site/sitemap.xml
