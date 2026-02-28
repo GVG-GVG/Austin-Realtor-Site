@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://agochs.github.io/Austin-Realtor-Site/sitemap.xml
+Sitemap: https://austingochneaurrealestate.com/sitemap.xml
