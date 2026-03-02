@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover Des Moines, Iowa - Iowa's vibrant capital with cultural attractions, diverse neighborhoods, and affordable real estate. Work with Austin Gochneaur, RE/MAX Real Estate Center.">
+    <meta name="keywords" content="Des Moines Iowa homes, real estate, East Village, Sherman Hill, downtown living, state capital">
+    <meta property="og:title" content="Des Moines, Iowa Real Estate | Austin Gochneaur">
+    <meta property="og:description" content="Explore Des Moines neighborhoods, cultural attractions, and diverse real estate opportunities from $200K and up.">
+    <link rel="canonical" href="https://austingochneaur.com/des-moines">
+    <title>Des Moines, Iowa Real Estate | Austin Gochneaur - RE/MAX</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #1a2a3a;
+            --accent-gold: #c8a97e;
+            --light-bg: #f8f9fa;
+            --text-dark: #2c3e50;
+            --text-light: #5a6c7d;
+            --white: #ffffff;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--white);
+        }
+
+        /* Navigation */
+        header {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 1.5rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-decoration: none;
+            color: var(--white);
+        }
+
+        .logo:hover {
+            color: var(--accent-gold);
+            transition: color 0.3s ease;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--white);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-gold);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(110deg, #1a2a3a 0%, #2d3f52 50%, #1a2a3a 100%);
+            color: var(--white);
+            padding: 8rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><defs><pattern id="city" width="80" height="80" patternUnits="userSpaceOnUse"><rect x="10" y="10" width="15" height="25" fill="rgba(200,169,126,0.1)"/><rect x="30" y="5" width="12" height="30" fill="rgba(200,169,126,0.08)"/><rect x="50" y="15" width="15" height="25" fill="rgba(200,169,126,0.1)"/></pattern></defs><rect width="1200" height="600" fill="url(%23city)"/></svg>');
+            z-index: 0;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            font-weight: 300;
+            color: #d0d0d0;
+        }
+
+        /* Market Snapshot */
+        .market-snapshot {
+            background-color: var(--light-bg);
+            padding: 4rem 2rem;
+        }
+
+        .section-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .stat-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-gold);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        .stat-card h3 {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-card .value {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        /* Neighborhoods Section */
+        .neighborhoods {
+            padding: 4rem 2rem;
+            background-color: var(--white);
+        }
+
+        .neighborhoods-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .neighborhood-card {
+            background: linear-gradient(135deg, #f5f8fb 0%, #faf8f5 100%);
+            padding: 2rem;
+            border-radius: 8px;
+            border-top: 3px solid var(--accent-gold);
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        .neighborhood-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+
+        .neighborhood-card p {
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        /* Schools Section */
+        .schools {
+            background-color: var(--light-bg);
+            padding: 4rem 2rem;
+        }
+
+        .schools-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .school-info {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            border-left: 4px solid var(--primary-color);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        .school-info h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .school-info p {
+            color: var(--text-light);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Unique Section */
+        .unique {
+            padding: 4rem 2rem;
+            background: linear-gradient(135deg, #faf8f5 0%, #f8f9fa 100%);
+        }
+
+        .unique-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .unique-item {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        .unique-item h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        /* CTA Section */
+        .cta {
+            background: linear-gradient(110deg, #1a2a3a 0%, #2d3f52 50%, #1a2a3a 100%);
+            color: var(--white);
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .cta-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .cta h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .cta p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            color: #d0d0d0;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            padding: 0.9rem 2rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            font-size: 1rem;
+        }
+
+        .cta-btn-primary {
+            background-color: var(--accent-gold);
+            color: var(--primary-color);
+        }
+
+        .cta-btn-primary:hover {
+            background-color: #d9b896;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(200,169,126,0.4);
+        }
+
+        .cta-btn-secondary {
+            background-color: transparent;
+            color: var(--white);
+            border: 2px solid var(--accent-gold);
+        }
+
+        .cta-btn-secondary:hover {
+            background-color: var(--accent-gold);
+            color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 2rem;
+            text-align: center;
+            border-top: 3px solid var(--accent-gold);
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-info {
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        .footer-info a {
+            color: var(--accent-gold);
+            text-decoration: none;
+        }
+
+        .footer-info a:hover {
+            text-decoration: underline;
+        }
+
+        .copyright {
+            font-size: 0.85rem;
+            color: #8a9aaa;
+            margin-top: 1.5rem;
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .section-title {
+                font-size: 1.6rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .cta-btn {
+                width: 100%;
+            }
+
+            .nav-links {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .neighborhoods-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .unique-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <div class="header-container">
+            <a href="/" class="logo">Austin Gochneaur</a>
+            <div class="nav-links">
+                <a href="/">Back to Main Site</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Des Moines, Iowa</h1>
+            <p>The Capital City: Culture, Affordability & Urban Living Opportunities</p>
+        </div>
+    </section>
+
+    <!-- Market Snapshot -->
+    <section class="market-snapshot">
+        <div class="section-container">
+            <h2 class="section-title">Market Snapshot</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>Population</h3>
+                    <div class="value">~215K</div>
+                </div>
+                <div class="stat-card">
+                    <h3>Median Home Price</h3>
+                    <div class="value">$200K</div>
+                </div>
+                <div class="stat-card">
+                    <h3>State Capital</h3>
+                    <div class="value">Hub</div>
+                </div>
+                <div class="stat-card">
+                    <h3>Affordability</h3>
+                    <div class="value">Most Accessible</div>
+                </div>
+            </div>
+            <p style="text-align: center; color: var(--text-light); font-size: 1.05rem;">As Iowa's state capital and largest city, Des Moines offers unparalleled affordability combined with urban amenities. Whether you're seeking downtown loft living, historic neighborhood charm, or affordable family neighborhoods, Des Moines delivers exceptional value with a vibrant cultural scene and strong economic foundation.</p>
+        </div>
+    </section>
+
+    <!-- Neighborhoods -->
+    <section class="neighborhoods">
+        <div class="section-container">
+            <h2 class="section-title">Distinctive Neighborhoods</h2>
+            <div class="neighborhoods-grid">
+                <div class="neighborhood-card">
+                    <h3>East Village (Median: $252K)</h3>
+                    <p>Des Moines' trendiest neighborhood showcases new restaurants, independent shops, galleries, and loft conversions. Young professionals and creative entrepreneurs flock to East Village for its walkability, authentic urban energy, and strong sense of community. Gentrification is ongoing, making this an excellent investment opportunity. Properties appreciate as the neighborhood matures and develops.</p>
+                </div>
+                <div class="neighborhood-card">
+                    <h3>Sherman Hill (Median: $330K)</h3>
+                    <p>A stunning historic district filled with meticulously preserved Victorian and Craftsman homes. Tree-lined streets, architectural details, and neighborhood character define Sherman Hill. Residents appreciate the area's established, mature feel and proximity to downtown. Recent restoration investments show strong market appreciation. Perfect for buyers seeking historic charm and neighborhood prestige.</p>
+                </div>
+                <div class="neighborhood-card">
+                    <h3>Downtown (Median: $262K)</h3>
+                    <p>Modern urban living in the heart of Des Moines. Loft apartments in converted buildings, new construction condos, and mixed-use developments attract young professionals and empty-nesters. Walking to restaurants, theaters, and offices appeals to those seeking urban convenience. The downtown market is experiencing strong growth as more people embrace city living.</p>
+                </div>
+                <div class="neighborhood-card">
+                    <h3>Beaverdale</h3>
+                    <p>A charming, established residential neighborhood with strong schools and stable family demographics. Tree-lined streets, quiet character, and accessible prices make Beaverdale attractive to families. The neighborhood maintains its charm while remaining close to downtown and commercial districts. Strong community pride and active neighborhood association enhance quality of life.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schools Section -->
+    <section class="schools">
+        <div class="schools-content">
+            <h2 class="section-title">Education & Schools</h2>
+            <div class="school-info">
+                <h3>Des Moines Public Schools</h3>
+                <p><strong>Coverage Area:</strong> All of Des Moines and surrounding areas</p>
+                <p><strong>System Overview:</strong> Iowa's largest school district serving thousands of students. The system serves a diverse student population and emphasizes inclusive education, language programs, and student support services.</p>
+                <p><strong>Notable Programs:</strong> Career technical education pathways, English language learner support, special education services, and diverse extracurricular offerings ensure students find opportunities matching their needs and interests.</p>
+            </div>
+            <div class="school-info">
+                <h3>Private & Charter Options</h3>
+                <p><strong>Diversity of Choice:</strong> Des Moines offers private schools, charter schools, and magnet programs providing families educational variety. Options include college preparatory institutions, arts-focused schools, and specialized academic programs.</p>
+                <p><strong>Competitive Environment:</strong> The presence of multiple educational providers creates competitive quality improvements across all systems. Families benefit from the range of educational philosophies and approaches available.</p>
+                <p><strong>Affordability Advantage:</strong> Unlike suburban areas, Des Moines' lower home prices reduce the financial barriers to accessing desirable school districts or private education, increasing overall educational accessibility.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- What Makes Des Moines Unique -->
+    <section class="unique">
+        <div class="section-container">
+            <h2 class="section-title">What Makes Des Moines Special</h2>
+            <div class="unique-grid">
+                <div class="unique-item">
+                    <h3>Cultural Attractions</h3>
+                    <p>Home to the world-famous Sculpture Park, Pappajohn Sculpture Park, and performing arts centers. Des Moines' cultural scene rivals much larger cities. Museums, galleries, theaters, and concert venues provide endless entertainment and cultural enrichment.</p>
+                </div>
+                <div class="unique-item">
+                    <h3>Court Avenue District</h3>
+                    <p>The city's premier entertainment and dining destination features live music venues, craft breweries, upscale restaurants, and nightlife. Court Avenue vibrates with energy and attracts diverse crowds. Living near Court Avenue puts culture and entertainment at your doorstep.</p>
+                </div>
+                <div class="unique-item">
+                    <h3>Unbeatable Affordability</h3>
+                    <p>At $200K median price, Des Moines offers real estate value impossible to find in similarly vibrant cities nationwide. Your dollars stretch further, potentially allowing larger homes, better neighborhoods, or meaningful savings compared to coasts or other metros.</p>
+                </div>
+                <div class="unique-item">
+                    <h3>Historic Architecture</h3>
+                    <p>Des Moines' neighborhoods showcase beautiful architecture from multiple eras. Preservation efforts maintain these historical gems while allowing them to evolve. For architecture enthusiasts, Des Moines' diverse styles offer endless appreciation and study.</p>
+                </div>
+                <div class="unique-item">
+                    <h3>Economic Hub</h3>
+                    <p>As the state capital, Des Moines hosts significant government employment plus strong presence of financial services, insurance, publishing, and technology companies. Economic diversity creates employment stability and growth opportunities for professionals.</p>
+                </div>
+                <div class="unique-item">
+                    <h3>Active River Valley</h3>
+                    <p>The Des Moines and Raccoon River valleys provide trails, parks, and natural recreation. The river corridor is undergoing revitalization, creating new walkable spaces. Urban parks and trail access add to quality of life and property appeal.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="cta-content">
+            <h2>Discover Des Moines Living</h2>
+            <p>Des Moines represents a unique opportunity: a vibrant, culturally-rich capital city with affordability you won't find elsewhere. Whether you're drawn to urban loft living, historic neighborhood charm, or family-friendly suburban areas within the city limits, Des Moines deserves exploration. Let me show you why so many are choosing to invest in Iowa's capital.</p>
+            <div class="cta-buttons">
+                <a href="tel:(515)415-9752" class="cta-btn cta-btn-primary">Call Austin</a>
+                <a href="mailto:austin.gochneaur@remax.com" class="cta-btn cta-btn-secondary">Email Austin</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <strong>Austin Gochneaur</strong><br>
+                RE/MAX Real Estate Center<br>
+                Des Moines, Iowa
+            </div>
+            <div class="footer-info">
+                <a href="tel:(515)415-9752">(515) 415-9752</a><br>
+                <a href="mailto:austin.gochneaur@remax.com">austin.gochneaur@remax.com</a>
+            </div>
+            <div class="copyright">
+                &copy; 2026 Austin Gochneaur, RE/MAX Real Estate Center. All rights reserved.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
